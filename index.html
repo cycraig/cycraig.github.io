@@ -1,8 +1,130 @@
-<html>
-  <head>
-    <title>Nothing to see here...</title>
-  </head>
-  <body bgcolor=white>
-    <p>Doesn't look like anything to me.</p>
-  </body>
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Portfolio">
+    <meta name="author" content="Craig Bester">
+    <title>Craig Bester &#8226; Personal Website</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" type="text/css" href="assets/paper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/demo.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+</head>
+<body>
+    <div id='content' class='row site'>
+    <div class='col-12 col'>
+        <div id='inner' class='paper'>
+            <div class='header'>
+                <div class='row flex-center'>
+                    <div class='text-center'>
+                        <h1>Craig Bester</h1>
+                        <!-- <h3>Simple. Fast. Wasm.</h3> -->
+                        <h3>Fast. Concise. Effective.</h3>
+                    </div>
+                </div>
+                
+                <div class="row flex-center">
+                    <a class='paper-btn round-btn margin' href="https://github.com/cycraig">
+                        <i class="fab fa-github fa-lg" aria-hidden="true"></i>
+                        <span class="sr-only">Github</span>
+                    </a>
+                    <a class="paper-btn round-btn margin" href="https://www.linkedin.com/in/craig-bester-a245ba9a">
+                        <i class="fab fa-linkedin-in fa-lg" aria-hidden="true"></i>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class='section' style='text-align:center;'>
+                Some of my open-sourced projects and technical demos.<br/><br/>
+                <!--Self-contained projects showcasing the capabilities of <a href="https://webassembly.org/">WebAssembly</a>, running purely in your browser.<br/><br/>--><!--<br/><br/>
+                Does everything need to be written in WebAssembly?<br/><br/>No, but it should be.-->
+                <!--
+                <h2>About</h2>
+                <p>PaperCSS was originally made by <a href="https://github.com/rhyneav" target="_blank">@rhyneav</a> to be something different than the typical mODerN STylEs and clean pages found in every other CSS framework. It was built with LESS and deployed on a single index.html page before being open sourced. It has since evolved; The CSS source has been rewritten in SCSS and the documentation is now built with Hugo (all thanks to some <a href="https://github.com/papercss/papercss/graphs/contributors" target="_blank">wonderful contributors</a>). In addition to the original creator, it is maintained by <a href="https://github.com/Fraham" target="_blank">@Fraham</a> and <a href="https://github.com/TotomInc" target="_blank">@TotomInc</a>.</p>
+
+                <p>The goal of PaperCSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn&rsquo;t be a need to add a class such as <code>paper-button</code>. Because of this, adding PaperCSS to a markdown generated page should instantly paper-ize it.</p>
+
+                <p>Feel free to use it for wireframes, webapps, blogs, or whatever else you can think of! It is licensed under the <a href="https://github.com/papercss/papercss/blob/master/license" target="_blank">ISC License</a>, so use it wherever you want to.</p>
+
+                <p>If you are new to Git or SCSS, this would be a great project to get your feet wet with. I&rsquo;d be happy to help walk you through the pull request process. Check out the <a href="https://github.com/papercss/papercss" target="_blank">Git repo</a> for more info!</p>
+                -->
+            </div>
+            
+            <div class="row flex-center">
+            
+                <div class="card margin">
+                    <a class="card-link" href="https://obscure-badlands-57226.herokuapp.com/">
+                    <img src="assets/img/scpbattle.png" alt="SCP Battle">
+                    <div class="card-body">
+                    <h4 class="card-title">SCP Battle</h4>
+                    <p class="card-text">Voting webapp based on the SCP Foundation.</p>
+                    </div>
+                    </a>
+                    <div class="card-footer">
+                        <a class='paper-btn card-footer-btn' href="https://github.com/cycraig/scpbattle">
+                        <i class="fab fa-github fa-lg card-github-icon" aria-hidden="true"></i><span class="sr-only">Github</span>Go, Echo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card margin">
+                    <a class="card-link" href="https://github.com/cycraig/MP-DQN">
+                        <img src="assets/img/mpdqnplat.jpg" alt="Card example image">
+                        <div class="card-body">
+                        <h4 class="card-title">MP-DQN</h4>
+                        <p class="card-text">Parameterised-action deep reinforcement learning research.</p>
+                        <!-- <button>Let me go here!</button> -->
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <a class='paper-btn card-footer-btn' href="https://github.com/cycraig/MP-DQN">
+                        <i class="fab fa-github fa-lg card-github-icon" aria-hidden="true"></i><span class="sr-only">Github</span>Python, PyTorch
+                        </a>
+                    </div>
+                    <!-- <div class="card-footer"><i class="fas fa-wrench" aria-hidden="true"></i> Rust + Yew</div> -->
+                </div>
+                
+                <div class="card margin">
+                    <a class="card-link" href="OpenCVApp/index.html">
+                    <img src="assets/img/facescrambler.jpg" alt="Card example image">
+                    <div class="card-body">
+                    <h4 class="card-title">Face Scramber</h4>
+                    <p class="card-text">Minimal example of using OpenCV with WebAssembly.</p>
+                    </div>
+                    </a>
+                    <div class="card-footer">
+                        <a class='paper-btn card-footer-btn' href="https://github.com/cycraig/facescrambler">
+                        <i class="fab fa-github fa-lg card-github-icon" aria-hidden="true"></i><span class="sr-only">Github</span>Javascript, OpenCV
+                    </a></div>
+                </div>
+                
+                <!--
+                <div class="card margin">
+                    <a class="card-link" href="http://google.com">
+                    <img src="https://picsum.photos/768" alt="Card example image">
+                    <div class="card-body">
+                    <h4 class="card-title">Game of Life</h4>
+                    <p class="card-text">Basic WebAssembly application.</p>
+                    </div>
+                    </a>
+                    <div class="card-footer">
+                        <a class='paper-btn card-footer-btn' href="https://github.com/cycraig/scpbattle">
+                        <i class="fab fa-github fa-lg card-github-icon" aria-hidden="true"></i><span class="sr-only">Github</span>Rust, Seed
+                        </a>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex-center">
+        <p><a href="https://www.rust-lang.org/">Rust</a> + <a href="https://github.com/yewstack/yew">Yew</a> + <a href="https://www.getpapercss.com/">PaperCSS</a><br/></p>
+        <p>
+    </div>
+    </div>
+</body>
+
 </html>

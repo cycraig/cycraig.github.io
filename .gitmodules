@@ -1,0 +1,3 @@
+[submodule "facescrambler"]
+	path = facescrambler
+	url = https://github.com/cycraig/facescrambler
