@@ -1,13 +1,16 @@
 body {
-    
-    background-image: url("geometry3.png")
+    background-image: url("../img/geometry.png")
+}
+
+:root {
+    /* variable so subsites can override styles easily */
+    --max-content-width: 1264px;
+    --min-content-width: 360px;
 }
 
 #content {
-    /*max-width: 1440px;*/
-    /*min-width: 375px;*/
-    max-width: 1264px;
-    min-width: 360px;
+    max-width: var(--max-content-width);
+    min-width: var(--min-content-width);
 }
 
 .section {
@@ -21,18 +24,14 @@ body {
 #inner {
     border-radius: 10px;
     background-color: rgba(255, 255,255,0.4);
+    margin-bottom: 0;
 }
 
 .round-btn {
     border-radius:50px;
 }
 
-a:hover {
-  color: gray;
-}
-
 a {
-  /* no underline */
   text-decoration: none; 
   -webkit-text-decoration-skip: none;
   background-image: none;
@@ -40,13 +39,12 @@ a {
   color: black;
 }
 
-.card-link {
-    padding: 1px;
-    text-decoration: none;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
+a:hover {
+  color: gray;
+}
+
+a:focus {
+    text-decoration: underline;
 }
 
 .card {
@@ -58,6 +56,15 @@ a {
 .card > * {
     text-decoration-color: white;
     text-decoration: none;
+}
+
+.card-link {
+    padding: 1px;
+    text-decoration: none;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
 }
 
 .card-link:focus {
@@ -89,6 +96,7 @@ a {
   background: none;
 }
 
-a:focus {
-    text-decoration: underline;
+.footer, .footer a {
+    color: lightgray;
+    margin-bottom: 0;
 }
