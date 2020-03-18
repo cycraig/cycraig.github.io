@@ -1,3 +1,6 @@
 [submodule "facescrambler"]
 	path = facescrambler
 	url = https://github.com/cycraig/facescrambler
+[submodule "assets_shared"]
+	path = assets_shared
+	url = https://github.com/cycraig/assets_shared.git
