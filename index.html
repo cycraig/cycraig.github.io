@@ -11,6 +11,46 @@
     <link rel="stylesheet" type="text/css" href="assets_shared/css/paper.min.css">
     <link rel="stylesheet" type="text/css" href="assets_shared/css/base.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <style>
+        #typed-message{
+            height: 1em;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            border-right: 2px solid rgba(0,0,0,.75);
+            text-align: center;
+            animation: blinkCursor 0.8s steps(11) infinite normal;
+        }
+        @keyframes blinkCursor{
+          from{border-right-color: rgba(0,0,0,.75);}
+          to{border-right-color: transparent;}
+        }
+    </style>
+    <script>
+        let i = 0;
+        let msg = 'Fast. Concise. Effective.';
+        let speed = 67;
+        let pause = 300;
+        let firstDelay = 500;
+        let elem;
+        
+        function typeWriter() {
+          if (i < msg.length) {
+            elem.innerHTML += msg.charAt(i);
+            i++;
+            if(i > 0 && msg.charAt(i-1) == '.') {
+                setTimeout(typeWriter, speed+pause);
+            } else {
+                setTimeout(typeWriter, speed);
+            }
+          }
+        }
+        
+        window.onload = function(e) {
+            elem = document.getElementById("typed-message");
+            setTimeout(typeWriter, firstDelay);
+        }
+    </script>
 </head>
 <body>
     <div id='content' class='row site'>
@@ -20,7 +60,7 @@
                 <div class='row flex-center'>
                     <div class='text-center'>
                         <h1>Craig Bester</h1>
-                        <h3>Fast. Concise. Effective.</h3>
+                        <h4 id="typed-message"><noscript>Fast. Concise. Effective.</noscript></h4>
                     </div>
                 </div>
                 
@@ -90,9 +130,9 @@
         </div>
     </div>
 
-    <div class="footer row flex-center">
+    <!--<div class="footer row flex-center">
         <p><a href="https://www.getpapercss.com/">PaperCSS</a><br/></p>
-    </div>
+    </div>-->
     </div>
 </body>
 
