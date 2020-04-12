@@ -12,6 +12,16 @@
     <link rel="stylesheet" type="text/css" href="assets_shared/css/base.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <style>
+        @media screen and (max-width: 480px) {
+            .header-name {
+                font-size: 3em;
+            }
+            
+            .header-message {
+                font-size: 1.2rem;
+            }
+        }
+        
         #typed-message{
             height: 1em;
             width: max-content;
@@ -21,9 +31,10 @@
             text-align: center;
             animation: blinkCursor 0.8s steps(11) infinite normal;
         }
+        
         @keyframes blinkCursor{
-          from{border-right-color: rgba(0,0,0,.75);}
-          to{border-right-color: transparent;}
+            from{border-right-color: rgba(0,0,0,.75);}
+            to{border-right-color: transparent;}
         }
     </style>
     <script>
@@ -35,15 +46,15 @@
         let elem;
         
         function typeWriter() {
-          if (i < msg.length) {
-            elem.innerHTML += msg.charAt(i);
-            i++;
-            if(i > 0 && msg.charAt(i-1) == '.') {
-                setTimeout(typeWriter, speed+pause);
-            } else {
-                setTimeout(typeWriter, speed);
+            if (i < msg.length) {
+                elem.innerHTML += msg.charAt(i);
+                i++;
+                if(i > 0 && msg.charAt(i-1) == '.') {
+                    setTimeout(typeWriter, speed+pause);
+                } else {
+                    setTimeout(typeWriter, speed);
+                }
             }
-          }
         }
         
         window.onload = function(e) {
@@ -59,8 +70,8 @@
             <div class='header'>
                 <div class='row flex-center'>
                     <div class='text-center'>
-                        <h1>Craig Bester</h1>
-                        <h4 id="typed-message"><noscript>Fast. Concise. Effective.</noscript></h4>
+                        <h1 class='header-name'>Craig Bester</h1>
+                        <h4 class='header-message' id="typed-message"><noscript>Fast. Concise. Effective.</noscript></h4>
                     </div>
                 </div>
                 
