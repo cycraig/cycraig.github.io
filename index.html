@@ -12,6 +12,20 @@
     <link rel="stylesheet" type="text/css" href="assets_shared/css/base.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <style>
+        .section {
+            pointer-events: none;
+        }
+        .section::after {
+            pointer-events: auto;
+        }
+        .section:hover::after {
+            cursor: pointer;
+            content: '- - -';
+        }
+        .section:active::after {
+            content: '/_\\';
+        }
+        
         @media screen and (max-width: 480px) {
             .header-name {
                 font-size: 3em;
