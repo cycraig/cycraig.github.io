@@ -12,6 +12,14 @@
     <link rel="stylesheet" type="text/css" href="assets_shared/css/base.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <style>
+        canvas {
+            top: 40px;
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            z-index: -10;
+        }
+    
         .section {
             pointer-events: none;
         }
@@ -167,12 +175,35 @@
                 </div>
             </div>
         </div>
+        
+        <canvas></canvas>
     </div>
-
+    
     <!--<div class="footer row flex-center">
         <p><a href="https://www.getpapercss.com/">PaperCSS</a><br/></p>
     </div>-->
     </div>
+    
+    
+    <script type="module" src="./rust-boids-wasm/index.js"></script>
+    <script defer>
+        
+        // Override the canvas size to fit the inner container.
+        const canvas = document.querySelector('canvas')
+        function resizeCanvas(e) {
+          canvas.width = document.getElementById("inner").clientWidth;
+          canvas.height = document.getElementById("inner").scrollHeight/2;
+          if(e) { // prevent the original resize handler from running
+            e.stopImmediatePropagation();
+          }
+        }
+        window.addEventListener('resize', resizeCanvas);
+        
+        // Wait for the module to be loaded before overriding the canvas size.
+        document.addEventListener("DOMContentLoaded",()=>{
+            resizeCanvas();
+        });
+    </script>
 </body>
 
 </html>
