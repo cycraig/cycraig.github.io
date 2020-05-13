@@ -89,7 +89,7 @@
     <div id='content' class='row site'>
     <div class='col-12 col'>
         <div id='inner' class='paper'>
-            <div class='header'>
+            <div id='header' class='header'>
                 <div class='row flex-center'>
                     <div class='text-center'>
                         <h1 class='header-name'>Craig Bester</h1>
@@ -101,6 +101,10 @@
                     <a class='paper-btn round-btn margin' href="https://github.com/cycraig">
                         <i class="fab fa-github fa-lg" aria-hidden="true"></i>
                         <span class="sr-only">Github</span>
+                    </a>
+                    <a class="paper-btn round-btn margin" href="mailto:me&commat;craigbester&period;ml">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span class="sr-only">Email</span>
                     </a>
                     <a class="paper-btn round-btn margin" href="https://www.linkedin.com/in/craig-j-bester">
                         <i class="fab fa-linkedin-in fa-lg" aria-hidden="true"></i>
@@ -192,7 +196,7 @@
         const canvas = document.querySelector('canvas')
         function resizeCanvas(e) {
           canvas.width = document.getElementById("inner").clientWidth;
-          canvas.height = document.getElementById("inner").scrollHeight/2;
+          canvas.height = document.getElementById("header").scrollHeight*2;
           if(e) { // prevent the original resize handler from running
             e.stopImmediatePropagation();
           }
