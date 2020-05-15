@@ -10,7 +10,7 @@
     
     <link rel="stylesheet" type="text/css" href="assets_shared/css/paper.min.css">
     <link rel="stylesheet" type="text/css" href="assets_shared/css/base.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <style>
         canvas {
             top: 40px;
@@ -59,23 +59,23 @@
             to{border-right-color: transparent;}
         }
     </style>
-    <script>
+    <script type="application/javascript">
         let i = 0;
-        let msg = 'Fast. Concise. Effective.';
-        let speed = 67;
-        let pause = 300;
-        let firstDelay = 500;
+        const msg = 'Fast. Concise. Effective.';
+        const speed = 67;
+        const pause = 300;
+        const firstDelay = 500;
         let elem;
         
         function typeWriter() {
             if (i < msg.length) {
                 elem.innerHTML += msg.charAt(i);
                 i++;
+                let delay = speed;
                 if(i > 0 && msg.charAt(i-1) == '.') {
-                    setTimeout(typeWriter, speed+pause);
-                } else {
-                    setTimeout(typeWriter, speed);
+                    delay += pause;
                 }
+                setTimeout(typeWriter, delay);
             }
         }
         
@@ -190,7 +190,7 @@
     
     
     <script type="module" src="./rust-boids-wasm/index.js"></script>
-    <script defer>
+    <script type="application/javascript" defer>
         
         // Override the canvas size to fit the inner container.
         const canvas = document.querySelector('canvas')
@@ -208,6 +208,6 @@
             resizeCanvas();
         });
     </script>
-</body>
+    
 
 </html>
