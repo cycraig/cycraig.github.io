@@ -51,7 +51,7 @@
             margin-right: auto;
             border-right: 2px solid rgba(0,0,0,.75);
             text-align: center;
-            animation: blinkCursor 0.8s steps(11) infinite normal;
+            animation: blinkCursor 1s steps(11) infinite normal;
         }
         
         @keyframes blinkCursor{
@@ -84,6 +84,7 @@
             setTimeout(typeWriter, firstDelay);
         }
     </script>
+    
 </head>
 <body>
     <div id='content' class='row site'>
@@ -102,7 +103,7 @@
                         <i class="fab fa-github fa-lg" aria-hidden="true"></i>
                         <span class="sr-only">Github</span>
                     </a>
-                    <a class="paper-btn round-btn margin" href="mailto:me&commat;craigbester&period;ml">
+                    <a class="paper-btn round-btn margin" href="mailto:&#x6d;&#x65;&commat;&#x63;&#x72;&#x61;&#x69;&#x67;&#x62;&#x65;&#x73;&#x74;&#x65;&#x72;&period;&#x6d;&#x6c;">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                         <span class="sr-only">Email</span>
                     </a>
@@ -207,6 +208,21 @@
         document.addEventListener("DOMContentLoaded",()=>{
             resizeCanvas();
         });
+
+        // Forward mouse events to the canvas
+        let forwardMouseEvent = function(event) {
+            var forwardedEvent = document.createEvent("MouseEvents");
+            // set event.bubbles false otherwise the listener recurses
+            forwardedEvent.initMouseEvent(event.type, false, event.cancelable, event.view, event.detail,
+                event.pageX || event.layerX, event.pageY || event.layerY, event.clientX, event.clientY, 
+                event.ctrlKey, event.altKey, event.shiftKey, event.metaKey, event.button, 
+                event.relatedTarget);
+            canvas.dispatchEvent(forwardedEvent);
+        };
+        const content = document.getElementById("content");
+        content.addEventListener('click', event => forwardMouseEvent(event));
+        content.addEventListener('mousemove', event => forwardMouseEvent(event));
+        content.addEventListener('mouseleave', event => forwardMouseEvent(event));
     </script>
     
 
