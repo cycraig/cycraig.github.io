@@ -20,18 +20,24 @@
             z-index: -10;
         }
     
-        .section {
+        #section-description {
             pointer-events: none;
         }
-        .section::after {
+        #section-description::after {
             pointer-events: auto;
         }
-        .section:hover::after {
+        #section-description:hover::after {
             cursor: pointer;
             content: '- - -';
         }
-        .section:active::after {
+        #section-description:active::after {
             content: '/_\\';
+        }
+        #section-description::after {
+            content: '~~~';
+        }
+        .section::after {
+            display: None;
         }
         
         @media screen and (max-width: 480px) {
@@ -96,6 +102,7 @@
     </script>
 </head>
 <body>
+
     <div id='content' class='row site'>
     <div class='col-12 col'>
         <div id='inner' class='paper'>
@@ -122,7 +129,7 @@
                     </a>
                 </div>
             </div>
-            <div class='section' style='text-align:center;'>
+            <div id='section-description' class='section' style='text-align:center;'>
                 Some of my open-sourced projects and technical demos.<br/><br/>
                 <!--Self-contained projects showcasing the capabilities of <a href="https://webassembly.org/">WebAssembly</a>, running purely in your browser.<br/><br/>--><!--<br/><br/>
                 Does everything need to be written in WebAssembly?<br/><br/>No, but it should be.-->
@@ -193,15 +200,33 @@
         <canvas></canvas>
     </div>
     
-    <!--<div class="footer row flex-center">
-        <p><a href="https://www.getpapercss.com/">PaperCSS</a><br/></p>
-    </div>-->
+    <div class='col-12 col'>
+        <div id='inner' class='paper'>
+            <div id='header' class='header'>
+                <div class='row flex-center'>
+                    <div class='text-center'>
+                        <h1 class='header-name'>Support privacy.</h1>
+                    </div>
+                </div>
+            </div>
+            <div class='section' style='text-align:center;'>
+                    Unfettered use of facial recognition software is ineffectual, biased, and erodes human rights.
+            </div>
+            <div class='section' style='text-align:center;'>
+                    <p>UK: <a class='paper-btn' href="https://bigbrotherwatch.org.uk/" style="padding:10px;">bigbrotherwatch.org.uk</a>
+                    </p>
+                    <p>USA: <a class='paper-btn' href="https://www.banfacialrecognition.com/" style="padding:10px;">banfacialrecognition.com</a></p>
+            </div>
+            <iframe src="https://www.banfacialrecognition.com/map/?embed=true" style="width:100%;height:400px;overflow:hidden;border:none"></iframe>
+        </div>
     </div>
-    
+    <div class="footer row flex-center">
+        <p>© 2021 Craig Bester</p>
+    </div>
+    </div>
     
     <script type="module" src="./rust-boids-wasm/index.js"></script>
     <script type="application/javascript" defer>
-        
         // Override the canvas size to fit the inner container.
         const canvas = document.querySelector('canvas')
         function resizeCanvas(e) {
