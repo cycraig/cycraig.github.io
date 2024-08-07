@@ -80,10 +80,9 @@
                 event.relatedTarget);
             canvas.dispatchEvent(forwardedEvent);
         };
-        const content = document.getElementById("content");
-        content.addEventListener('click', event => forwardMouseEvent(event));
-        content.addEventListener('mousemove', event => forwardMouseEvent(event));
-        content.addEventListener('mouseleave', event => forwardMouseEvent(event));
+        document.addEventListener('click', event => forwardMouseEvent(event));
+        document.addEventListener('mousemove', event => forwardMouseEvent(event));
+        document.addEventListener('mouseleave', event => forwardMouseEvent(event));
     </script>
 </body>
 </html>
