@@ -1,6 +1,3 @@
-[submodule "assets_shared"]
-	path = assets_shared
-	url = https://github.com/cycraig/assets_shared.git
 [submodule "rust-boids-wasm"]
 	path = rust-boids-wasm
 	url = https://github.com/cycraig/rust-boids-wasm
