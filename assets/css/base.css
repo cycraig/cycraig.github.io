@@ -1,0 +1,82 @@
+:root {
+    --fore-color: #c7d1ddff;
+    color: var(--fore-color);
+}
+
+body {
+    background-image: url("../img/geometry.png")
+}
+
+@media only screen and (max-width: 480px) {
+    .col {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .header-name {
+        font-size: 2.5em;
+    }
+
+    .header-message {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
+}
+
+#boids {
+    top: 0;
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    z-index: -10;
+}
+
+#content {
+    max-width: 1264px;
+    min-width: 360px;
+}
+
+#inner {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding-bottom: 0;
+}
+
+#spaghetti {
+    font-family: cursive;
+}
+
+.paper-btn {
+    background-color: var(--fore-color);
+}
+
+.round-btn {
+    border-radius: 50px;
+}
+
+a {
+    text-decoration: none;
+    -webkit-text-decoration-skip: none;
+    background-image: none;
+    outline: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+.footer,
+.footer a {
+    color: rgb(79, 79, 79);
+    margin-bottom: 0;
+}
