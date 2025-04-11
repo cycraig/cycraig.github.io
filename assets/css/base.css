@@ -1,10 +1,29 @@
+@font-face {
+    font-family: Ripcord;
+    src: local(Ripcord),
+    url("../font/Ripcord.otf") format("opentype");
+}
+
 :root {
     --fore-color: #c7d1ddff;
     color: var(--fore-color);
 }
 
+@keyframes bgScroll {
+    0% {
+        background-position: 0 0
+    }
+    100% {
+        background-position: 0 -400px
+    }
+}
+
 body {
-    background-image: url("../img/geometry.png")
+    background-color: #1b1b1b;
+    background-image: url("../img/geometry.png");
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    animation: bgScroll 36s linear infinite;
 }
 
 @media only screen and (max-width: 480px) {
@@ -47,28 +66,45 @@ body {
     padding-bottom: 0;
 }
 
+.header-name {
+    font-family: Ripcord, monospace, sans-serif !important;
+}
+
 #spaghetti {
     font-family: cursive;
 }
 
+#buttons {
+    margin-top: 3rem;
+}
+
 .paper-btn {
-    background-color: var(--fore-color);
+    background: none;
 }
 
 .round-btn {
-    border-radius: 50px;
+    border-radius: 100%;
+    padding: 10px;
 }
 
-a {
-    text-decoration: none;
-    -webkit-text-decoration-skip: none;
-    background-image: none;
-    outline: none;
-    color: black;
+.icon-image {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    /* #41403e */
+    transition: all 235ms ease-in-out 0s;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(5%) saturate(317%) hue-rotate(2deg) brightness(92%) contrast(88%);
 }
 
-a:hover {
-    color: black;
+.round-btn:hover > .icon-image, .round-btn:focus > .icon-image {
+    /* #c7d1dd */
+    transition: all 235ms ease-in-out 0s;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(9%) saturate(286%) hue-rotate(173deg) brightness(99%) contrast(88%);
+}
+
+a:hover, a:focus {
+    color: var(--fore-color);
+    border-color: var(--fore-color);
 }
 
 a:focus {
@@ -78,5 +114,6 @@ a:focus {
 .footer,
 .footer a {
     color: rgb(79, 79, 79);
+    margin-top: 4rem;
     margin-bottom: 0;
 }
