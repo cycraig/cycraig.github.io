@@ -13,7 +13,9 @@
     <link rel="preload" href="assets/img/envelope.svg" as="image"/>
     <link rel="preload" href="assets/img/github.svg" as="image"/>
     <link rel="preload" href="assets/font/Ripcord.otf" as="font" crossorigin="anonymous"/>
-    <link rel="preload" href="rust-boids-wasm/index.js" as="script" crossorigin="anonymous"/>
+    <link rel="modulepreload" href="rust-boids-wasm/index.js"/>
+    <link rel="preload" href="rust-boids-wasm/pkg/boids.js" as="script" crossorigin/>
+    <link rel="preload" href="rust-boids-wasm/pkg/boids_bg.wasm" as="fetch" crossorigin/>
     <link rel="stylesheet" type="text/css" href="assets/css/paper.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/base.css">
 
