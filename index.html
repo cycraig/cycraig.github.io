@@ -35,11 +35,11 @@
             </div>
 
             <div id="buttons" class="buttons row flex-center" style="visibility: hidden;">
-                <!--<a id="btn-gh" class='paper-btn round-btn margin' aria-label="GitHub" href="03151203185b495c0c08121b1e034810040c4910120214120206">
+             <!--<a id="btn-gh" class='paper-btn round-btn margin' aria-label="GitHub" href="03151203185b495c0c08121b1e034810040c4910120214120206">
                     <img style="padding:0" class="icon-image" src="assets/img/github.svg" alt="GitHub"
                          aria-hidden="true">
                 </a>
-                <a id="btn-em" class="paper-btn round-btn margin" aria-label="Email" href="06000f1f1f0e5c040e03151a1f04261019000f14090415070e134810040c">
+                <a id="btn-em" class="paper-btn round-btn margin" aria-label="Email" href="06000f1f1f0e5c1d041303030718261019000f14090415070e134810040c">
                     <img style="padding:0.25rem" class="icon-image" src="assets/img/envelope.svg" alt="Email"
                          aria-hidden="true">
                 </a>-->
@@ -83,7 +83,7 @@
         const y = (t,k) => String.fromCharCode(...t.match(/.{1,2}/g).map((x,i) => parseInt(x, 16) ^ k.charCodeAt(i % k.length) % 255));
         for (const e of ["title", "buttons", "footer", "btn-gh", "btn-em"].map(id => document.getElementById(id))) {
             const h = e.getAttribute("\u0068\u0072\u0065\u0066");
-            if (h) e.href = y(y(x(h, a[a.length-1]), a[a.length-1]), a[a.length-1]);
+            //if (h) e.href = y(y(x(h, a[a.length-1]), a[a.length-1]), a[a.length-1]);
             e.style = "";
         }
     }
